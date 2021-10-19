@@ -1,4 +1,4 @@
-# Ixian Project - IXI Offline Tools
+# IXI Offline Tools
 Ixian Offline tools allow users to manage wallet and verify and sign raw transactions. Intended for secure environments.
 
 ## Running
@@ -90,3 +90,5 @@ Ixian DLT is a revolutionary blockchain that brings several innovative advantage
 **Bitcointalk**: https://bitcointalk.org/index.php?topic=4631942.0
 
 **Documentation**: https://docs.ixian.io
+
+**GitHub**: https://www.github.com/ProjectIxian

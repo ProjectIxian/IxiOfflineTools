@@ -23,7 +23,7 @@ namespace IxiOfflineTools
             cmdParser.Setup<string>('w', "wallet").Callback(value => options.wallet = value);
             cmdParser.Setup<string>("walletPassword").Callback(value => options.walletPassword = value);
             cmdParser.Setup<string>("checksumLock").Callback(value => options.checksumLock = Encoding.UTF8.GetBytes(value));
-            cmdParser.Setup<string>("verboseOutput").Callback(value => options.verboseOutput = true);
+            cmdParser.Setup<bool>("verboseOutput").Callback(value => options.verboseOutput = false);
             cmdParser.Setup<int>("logVerbosity").Callback(value => options.logVerbosity = value);
 
             cmdParser.Parse(args);

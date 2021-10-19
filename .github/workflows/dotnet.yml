@@ -35,7 +35,7 @@ jobs:
     - name: Restore dependencies
       run: nuget restore src\IxiOfflineTools.sln
 
-    - name: Building Ixian-LiteWallet
+    - name: Building IXI Offline Tools
       run: msbuild src\IxiOfflineTools.sln
 
     #- name: Running Unit Tests
