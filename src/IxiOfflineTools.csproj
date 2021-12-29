@@ -79,6 +79,7 @@
     <Compile Include="CliOptions.cs" />
     <Compile Include="Commands\Commands.cs" />
     <Compile Include="Meta\Config.cs" />
+    <Compile Include="Miner\Miner.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

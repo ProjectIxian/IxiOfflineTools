@@ -132,6 +132,16 @@ namespace IxiOfflineTools
 
             while (!IxianHandler.forceShutdown)
             {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+
+                    if (key.Key == ConsoleKey.Escape)
+                    {
+                        IxianHandler.forceShutdown = true;
+                    }
+
+                }
                 Thread.Sleep(100);
             }
 
@@ -140,6 +150,12 @@ namespace IxiOfflineTools
 
         void handleChangePass()
         {
+            if (Program.cliOptions.noWallet)
+            {
+                Console.WriteLine("Cannot change password in no wallet mode.");
+                return;
+            }
+
             // Request a new password
             string new_password = "";
             while (new_password.Length < 10)

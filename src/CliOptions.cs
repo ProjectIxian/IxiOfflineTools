@@ -10,6 +10,7 @@ namespace IxiOfflineTools
         public byte[] checksumLock = null;
         public bool verboseOutput = false;
         public int logVerbosity = 14;
+        public bool noWallet = false;
     }
 
     class CliOptionsParser
@@ -25,6 +26,7 @@ namespace IxiOfflineTools
             cmdParser.Setup<string>("checksumLock").Callback(value => options.checksumLock = Encoding.UTF8.GetBytes(value));
             cmdParser.Setup<bool>("verboseOutput").Callback(value => options.verboseOutput = false);
             cmdParser.Setup<int>("logVerbosity").Callback(value => options.logVerbosity = value);
+            cmdParser.Setup<bool>("noWallet").Callback(value => options.noWallet = true);
 
             cmdParser.Parse(args);
 

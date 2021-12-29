@@ -39,9 +39,14 @@ namespace IxiOfflineTools
 
         private bool initWallet(string walletFile, string walletPassword = "")
         {
-            WalletStorage walletStorage = new WalletStorage(walletFile);
-
             Logging.flush();
+            if (Program.cliOptions.noWallet)
+            {
+                Console.WriteLine("Initializing with no wallet");
+                return true;
+            }
+
+            WalletStorage walletStorage = new WalletStorage(walletFile);
 
             if (!walletStorage.walletExists())
             {
