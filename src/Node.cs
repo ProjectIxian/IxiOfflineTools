@@ -156,12 +156,12 @@ namespace IxiOfflineTools
             throw new NotImplementedException();
         }
 
-        public override Wallet getWallet(byte[] id)
+        public override Wallet getWallet(Address id)
         {
             throw new NotImplementedException();
         }
 
-        public override IxiNumber getWalletBalance(byte[] id)
+        public override IxiNumber getWalletBalance(Address id)
         {
             throw new NotImplementedException();
         }
@@ -173,6 +173,11 @@ namespace IxiOfflineTools
 
         public override void shutdown()
         {
+        }
+
+        public override IxiNumber getMinSignerPowDifficulty(ulong blockNum)
+        {
+            throw new NotImplementedException();
         }
     }
 }
