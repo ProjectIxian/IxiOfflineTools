@@ -126,7 +126,7 @@ namespace IxiOfflineTools
             throw new NotImplementedException();
         }
 
-        public override BlockHeader getBlockHeader(ulong blockNum)
+        public override Block getBlockHeader(ulong blockNum)
         {
             throw new NotImplementedException();
         }
